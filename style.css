@@ -1,0 +1,277 @@
+/* Affichage sur Mobile */
+
+/* Fonts */
+
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/Nunito-Regular.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/Nunito-Bold.ttf);
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url(fonts/Nunito-Light.ttf);
+    font-weight: 300;
+}
+
+/* General */
+
+body{
+    background: #efefef;
+    font-family: Nunito, sans-serif;
+}
+a, a:hover, a:focus{
+    text-decoration: none;
+    color: #fff;
+}
+
+img{
+    width:  100%;
+
+}
+/* Header pour mobile */
+
+@-webkit-keyframes clignote {
+    form{opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes clignote {
+    form{opacity: 1;}
+    to {opacity: 0;}
+}
+
+header{
+    line-height: 50px;
+    background: #1c7ed6;
+    text-align: center;
+    font-weight: 700px;
+}
+
+header h1 a {
+font-size: 1.5em;
+}
+
+header h1 a span {
+  -webkit-animation: clignote .5s ease alternate infinite;
+  animation: clignote .5s ease alternate infinite;
+}
+
+header nav {
+    font-size: 0.9em;
+}
+
+/* Bloc de presentation pour mobile */
+
+section {
+    padding: 30px 0px;
+    background: #fff;
+    border-bottom:  3px solid #ddd;
+    text-align: center;
+}
+
+section h1 {
+    font-size:  2.5em;
+    font-weight:  bold;
+    color: #333;
+    margin-bottom: 18px;
+}
+
+section p{
+    font-size: 1.2em;
+    color: #777;
+    line-height: 1.4em;
+    font-style: italic;
+    text-align: justify;
+}
+
+/* Articles */
+
+.articles {
+    margin-bottom: 30px;
+}
+
+article {
+   margin-top: 30px;
+   border-radius:  7px;
+   background: #fff;
+   border-bottom:  1px solid #ddd;
+}
+
+article img {
+     border-radius: 7px 7px 0 0;
+}
+
+article h1, article a, article p {
+    margin: 20px;
+}
+
+article h1 {
+    font-weight: bold;
+    color:  #333;
+    font-size: 1.3em;
+    line-height: 1.3em;
+}
+
+article p {
+    color:  #555;
+    line-height: 1.4em;
+
+}
+
+article a {
+    display: block;
+    background: #1c7ed6e3;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 40px;
+    border-bottom: 2px solid #217acb;
+}
+
+/* Affiche sur appariels tablette */
+
+@media (min-width: 768px) {
+    header h1 {
+        text-align: left;
+    }
+
+    header ul {
+        float: right;
+    }
+
+    header li {
+        float: left;
+    }
+
+    header li + li {
+        margin-left: 15px;
+    }
+
+    section {
+       text-align: justify;
+    }
+
+    .articles div:nth-child(2n+1) {
+        clear: left;
+    }
+}
+
+/* Affiche sur grand écrans */
+
+@media (min-width: 992px) {
+    .articles div:nth-child(2n+1) {
+        clear: none;
+    }
+
+    .articles div:nth-child(3n+1) {
+        clear: left;
+    }
+
+    article img {
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        -webkit-transition:  filtre .0s linear;
+        transition:  filtre .0s linear;
+    }
+
+    article:hover img {
+        -webkit-filter: none;
+        filter: none;
+    }
+
+
+}
+
+/* Footer */
+@-webkit-keyframes clignote {
+    form{opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes clignote {
+    form{opacity: 1;}
+    to {opacity: 0;}
+}
+
+footer {
+    background: #1c7ed6;
+    text-align: left;
+    font-family: poppins, sans-serif;
+    font-size: 15px;
+    width: 100%;
+}
+
+footer h1 a {
+    line-height: 50px;
+    text-align: center;
+    font-weight: 700;
+    padding-left: 29px;
+}
+
+footer h1 a span {
+  -webkit-animation: clignote .5s ease alternate infinite;
+  animation: clignote .5s ease alternate infinite;
+}
+
+
+footer div nav li {
+  text-align: left;
+  position: relative;
+ line-height: 1.3em;
+}
+footer div nav h1 {
+  text-align: left;
+  padding: 0px 0px 1px;
+}
+
+footer div nav ul {
+    padding-bottom: 10px;
+}
+
+footer div p  {
+    text-align: right;
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 0.9em;
+    color: aliceblue;
+}
+
+footer div #em {
+    color: aliceblue;
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 0.9em;
+}
+
+#mm  {
+    background: #495057;
+
+
+    width: 100%;
+    line-height: normal;
+}
+
+#l{
+    padding-left: 14px;
+}
+
+#f, #t, #i, #w {
+    font-family: poppins;
+    font-weight: 100;
+    font-size: 0.8em;
+}
+
+#b p {
+    text-align: center;
+}
+
+#r{
+    padding: 48px 48px 48px 48px;
+    margin-top: -48px
+}
